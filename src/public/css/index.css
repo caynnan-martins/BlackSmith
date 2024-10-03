@@ -1,0 +1,517 @@
+body {
+    overflow-x: hidden; /* Evita scroll horizontal indesejado */
+}
+
+.home {
+    display: flex;
+    width: 100%;
+    height: 68vh;
+    font-family: var(--font-pd);
+    align-items: center;
+    position: relative; /* Para garantir que elementos absolutos fiquem posicionados corretamente */
+}
+
+.home .texts {
+    color: var(--color-text);
+    max-width: 550px; /* Ajuste para evitar overflow */
+    width: 100%; /* Para responsividade */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 100px;
+}
+
+.home .texts h1 {
+    width: 100%; /* Para evitar largura fixa */
+    font-size: 53px;
+    line-height: 60px;
+}
+
+.home .banner {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 68vh;
+    object-fit: cover;
+    filter: brightness(200%) contrast(40%) saturate(80%);
+}
+
+.btnFind {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 15px 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer; /* Adicionado para melhorar a usabilidade */
+}
+
+.mission {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--background-color);
+    color: white;
+    font-family: var(--font-pd);
+}
+
+.mission .texts h1 {
+    font-size: 40px;
+}
+
+.mission .texts {
+    width: 100%; /* Para responsividade */
+    max-width: 420px; /* Limita a largura para evitar overflow */
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nill {
+    background-color: transparent;
+    width: 100%;
+    height: 25vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas com tamanhos iguais */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 80px;
+    background-color: var(--background-color);
+}
+
+.grid-item {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o ícone e o texto */
+    gap: 15px; /* Espaçamento entre o ícone e o texto */
+    color: white; /* Cor do texto */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.grid-item img {
+    width: 101px; /* Tamanho do ícone */
+    padding: 20px;
+    border-radius: 50%; /* Torna o ícone circular */
+    background-color: var(--primary-color); /* Cor de fundo do ícone */
+}
+
+.projects {
+    padding: 40px 0;
+    background-color: var(--bg-secondy);
+    width: 100%;
+    font-family: var(--font-pd);
+}
+
+.projects h1 {
+    font-size: 35px;
+}
+
+.rowProjects {
+    display: flex; /* Mantém os cards alinhados em linha */
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se não houver espaço */
+    gap: 40px; /* Espaçamento entre os cards */
+    width: 100%; /* Para evitar overflow */
+    justify-content: center;
+}
+
+.text-button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.text-button-wrapper h2 {
+    margin: 0;
+}
+
+.text-button-wrapper .btnFind {
+    background-color: var(--primary-color); /* Use a cor que desejar */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 276px;
+    border-radius: 10px;
+    border: 1px solid rgb(216, 216, 216);
+    position: relative; /* Necessário para o posicionamento absoluto da seta */
+}
+
+.card .banner {
+    border-radius: 10px 10px 0px 0px;
+    width: 100%; /* Para garantir que a imagem não cause overflow */
+    height: 227px;
+    object-fit: cover;
+}
+
+.card .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    width: 100%; /* Garante que o texto e botão usem o espaço disponível */
+}
+
+.card .texts hr {
+    width: 63%;
+}
+
+.rowMore {
+    display: flex;
+    gap: 20px;
+}
+
+.rowMore .cards {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    width: 288px;
+}
+
+.rowMore .cards .texts hr {
+    width: 63%;
+}
+
+.rowMore .cards .banner {
+    border-radius: 10px;
+    width: 100%; /* Para evitar overflow */
+    height: 230px;
+    object-fit: cover;
+}
+
+.rowMore .cards .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    width: auto;
+}
+
+.text-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 86%;
+    margin-left: 5%;
+    padding: 10px;
+}
+
+.seta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 5px;
+    right: -30px; /* Ajuste a distância da seta em relação ao card */
+    top: 50%; /* Centraliza verticalmente em relação ao card */
+    transform: translateY(-50%); /* Compensa a altura da seta */
+    z-index: 1; /* Certifica-se de que a seta esteja acima do card */
+    cursor: pointer;
+}
+
+.divRandom {
+    width: 100%;
+    height: 60vh;
+}
+
+.divRandom .banner {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.avalition {
+    font-family: var(--font-pd);
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-evenly; /* Ajustado para 'space-between' */
+    flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha em telas pequenas */
+}
+
+.mobile {
+    display: none;
+}
+
+.avalition .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Ajustado para ocupar toda a largura disponível */
+    max-width: 500px; /* Limita a largura em telas grandes */
+}
+
+.avalition .texts h1 {
+    font-size: 2.5em; /* Ajustado para uma unidade relativa */
+}
+
+.avUsers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Ajustado para ocupar toda a largura disponível */
+    max-width: 600px; /* Limita a largura em telas grandes */
+}
+
+.userAv {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #d8d8d8;
+    padding: 20px; /* Reduzido para evitar muito espaçamento em telas pequenas */
+    border-radius: 10px;
+}
+
+.userAv .text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduzido para mais espaço em telas pequenas */
+}
+
+.userAv .avatar {
+    width: 80px; /* Reduzido para telas menores */
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+}
+
+.projects .text {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna por padrão */
+    align-items: center;
+    gap: 60px;
+    font-family: var(--font-pd);
+    background-color: #f5f5f5; /* Cor de fundo suave para destacar a seção */
+}
+
+@media (min-width: 768px) {
+    .none{
+        display: none;
+    }
+    .form {
+        flex-direction: row; /* Muda para linha em telas maiores */
+        padding: 40px 100px;
+    }
+}
+
+.form .cardx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.form .servicesx{
+    display: flex;
+}
+
+.form .banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.form .banner i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+    width: 100%;
+}
+
+.form input, textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 300px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input[type="tel"]:invalid {
+    border-color: red;
+}
+
+.btnMsg {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btnMsg:hover {
+    background-color: #b34800; /* Cor de hover para botão */
+}
+
+.textsc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left; /* Centraliza o texto para a esquerda */
+}
+
+.tetsss {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.cardb {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cardb i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #333; /* Ajusta a cor do ícone para se destacar */
+}
+
+/* Media Query para telas menores */
+@media (max-width: 767px) {
+    .form {
+        padding: 20px;
+    }
+
+    .form .cardx {
+        width: 90%;
+        max-width: none;
+    }
+
+    .form input {
+        max-width: none;
+    }
+
+    .textsc {
+        max-width: none;
+        padding: 0 20px;
+    }
+    .form .servicesx{
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .text-wrapper{
+        justify-content: center;
+
+    }
+    .nonex{
+        display: none;
+    }
+    .text-wrapper{
+        justify-content: center;
+    }
+    .home .texts h1 {
+        max-width: 300px; /* Limita a largura */
+        font-size: 33px;
+    }
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* Uma coluna em telas pequenas */
+    }
+    .home .texts {
+        margin-left: 25px;
+        padding: 20px;
+    }
+    .projects {
+        padding: 20px;
+        width: auto;
+    }
+    .projects .text {
+        width: auto;
+    }
+    .rowProjects {
+        justify-content: center;
+    }
+    .rowMore {
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .avalition {
+        flex-direction: column;
+    }
+    .mobile {
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+    .avalition {
+        flex-direction: column; /* Altera para coluna em telas pequenas */
+        align-items: flex-start; /* Alinhamento à esquerda */
+        gap: 20px;
+    }
+    .avalition .texts {
+        align-items: center;
+    }
+
+    .avalition .texts,
+    .avUsers {
+        width: 100%; /* Ocupa toda a largura */
+        max-width: none; /* Remove a largura máxima em telas pequenas */
+    }
+
+    .userAv {
+        width: 100%; /* Permite que os usuários ocupem toda a largura disponível */
+    }
+
+    .avalition h1 {
+        font-size: 2em; /* Ajuste do tamanho do título */
+    }
+}

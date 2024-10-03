@@ -1,0 +1,83 @@
+.section1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: white;
+    font-family: var(--font-pd);
+    gap: 25px;
+    padding: 20px;
+}
+
+section h1 {
+    font-size: 2.5rem; /* Usando rem para escalabilidade */
+}
+
+.rowText {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 90%; /* Usando porcentagem para largura */
+    max-width: 1200px; /* Máximo para telas grandes */
+    font-size: 1.25rem; /* Usando rem para escalabilidade */
+}
+
+.section2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font-pd);
+    gap: 25px;
+    padding: 20px;
+    background-color: #e7e7e7;
+}
+
+.btnBudget {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 14px 5vw; /* Usando vw para responsividade */
+    border-radius: 8px;
+    font-size: 1.25rem; /* Usando rem para escalabilidade */
+    font-weight: 600;
+}
+
+.secBanner{
+    height: 40vh;
+    width: 100%;
+}
+
+.banner{
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    section h1 {
+        font-size: 2rem; /* Diminuindo o tamanho do texto em telas menores */
+    }
+
+    .rowText {
+        width: 95%; /* Ajuste para telas menores */
+        font-size: 1rem; /* Diminuindo o tamanho do texto */
+    }
+
+    .btnBudget {
+        padding: 14px 10vw; /* Aumentando o padding horizontalmente */
+        font-size: 1rem; /* Diminuindo o tamanho do botão */
+    }
+}
+
+@media (max-width: 480px) {
+    section h1 {
+        font-size: 1.5rem; /* Reduzindo ainda mais o tamanho do texto */
+    }
+
+    .btnBudget {
+        padding: 14px 8vw; /* Ajustando ainda mais o padding */
+        font-size: 0.875rem; /* Ajustando o tamanho do botão */
+    }
+}

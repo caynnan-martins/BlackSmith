@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #242424;
+    --primary-color: #ef6c00;
+    --color-text: #232323;
+    --font-pd: "Montserrat", sans-serif;
+    --bg-secondy: #e7e7e7;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: darkorange; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    padding: 14px 50px; /* Padding ajustado */
+}
+
+.navbar .icon {
+    width: 180px;
+    padding-left: 53px;
+}
+
+.navbar .flexLeft {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding-right: 25px;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 45px;
+}
+
+.navbar .links li,
+.navbar .links a {
+    font-family: var(--font-pd);
+    list-style: none;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .links a:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.navbar .btnBudget {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 14px 80px; /* Ajuste o padding */
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: var(--background-color);
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: var(--primary-color);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Muda para coluna */
+        align-items: center; /* Centraliza */
+        padding: 20px; /* Ajuste o padding */
+        gap: 10px;
+    }
+
+    .navbar img{
+        width: 131px;
+        height: 57px;
+        object-fit: contain;
+    }
+
+    .navbar .flexLeft {
+        gap: 20px; /* Ajuste o espaço entre ícones */
+    }
+
+    .navbar .links {
+        gap: 40px; /* Ajuste o espaço entre links */
+        margin-left: 35px;
+    }
+    
+    .navbar .btnBudget {
+        display: none;
+    }
+    .navbar .icon{
+      padding-left: 0;
+    }
+}
